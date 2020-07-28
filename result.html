@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parcial Web Parte 2
+    </title> <meta charset="utf-8">
+    
+    <script type="text/javascript" src="funciones.js"></script>
+    <link rel="stylesheet" href="hmmm.css">
+</head>
+<body>      
+        <div class="xs">
+            <table class="x">
+                <tr class='x'>
+                    <td class="foto"><img id="face" src="smiley-face.png" alt="Face" style="width:75px;height:75px;"> </td>
+                    <td class="z"><b id="a1"></b><br><b>Alimento</b></td>
+                </tr>
+            </table>
+            <table class="Table">
+                <tr class="inTable">
+                    <td class="x">Calorias (kCal)</td>
+                    <td>
+                        <span id="c1" class="calorias">
+                        </span>
+                    </td>
+                    
+                </tr>
+                <tr class="inTable">
+                    <td class="x">Grasas (g)</td>
+                    <td><span id="g1" class="grasas">
+                    </span></td>
+                </tr>
+                <tr class="inTable">
+                    <td class="x">Proteínas (g)</td>
+                    <td><span id="p1" class="proteinas">
+                    </span></td>
+                </tr>
+                <tr class="inTable" style="
+                border-bottom-right-radius: 5px;">
+                    <td class="x">Carbohidratos (g)</td>
+                    <td>
+                        <span id="c2" class="carbs">
+                        </span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+       <div style="margin: auto; visibility: hidden;">
+        <h2>Ayuda tengo sueño :( <BR> Esto no es un meme, sáquenme de aquí</h2>
+       </div>
+
+    <script>
+        URL = window.location.search;
+        usp = new URLSearchParams(URL)
+        carita = usp.get("caritas");
+        alimento = usp.get("alimento");
+        calorias = usp.get("calorias");
+        grasas = usp.get("grasas");
+        proteina = usp.get("proteina");
+        carbohidratos = usp.get("carbohidratos");
+        document.getElementById("face").src = carita==="bien" ? "smiley-face.png" : "sad-face.png";
+        document.getElementById("a1").innerHTML = alimento;
+        document.getElementById("c1").innerHTML = calorias;
+        document.getElementById("g1").innerHTML = grasas;
+        document.getElementById("p1").innerHTML = proteina;
+        document.getElementById("c2").innerHTML = carbohidratos;
+    
+    </script>
+</body>
